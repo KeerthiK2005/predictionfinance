@@ -67,16 +67,3 @@ if st.button('Load Data and Forecast'):
     st.write("Forecast components")
     fig2 = m.plot_components(forecast)
     st.write(fig2)
-
-# Function to open the browser
-def open_browser():
-    webbrowser.open_new_tab("http://localhost:8501")
-
-# Create a thread to run Streamlit server
-server_thread = threading.Thread(target=open_browser)
-server_thread.start()
-
-# Run the Streamlit app
-if __name__ == "__main__":
-    st.run_server(port=8501)
-
